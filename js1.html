@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1><b>Hello , Its Abhi</b></h1>
+
+
+
+<div id="abhi"><h1>
+ My name is Abhi.</h1>
+</div>
+
+<script>
+function myFunction()
+{
+    let btn = document.getElementById("meet");
+
+  var x = document.getElementById("abhi");
+  if (x.style.display === "none") 
+    {
+    x.style.display = "block";
+    btn.textContent = "hide Me";
+    } 
+    else 
+    {
+    x.style.display = "none";
+    btn.textContent = "show me";
+    }
+}
+</script>
+<button style="color: blue;" id="meet" onclick="myFunction()">hide me</button>
+
+</body>
+</html> 
+
+
+
