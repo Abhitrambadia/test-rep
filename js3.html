@@ -37,36 +37,39 @@
 
     <div id="recordList"></div>
 
-    <button id="">edit</button>
+    <button id="edit">edit</button>
     <button id="deleteButton">Delete record</button>
+    
     <script>
         function addRecord() {
             var recordInput = document.getElementById("recordInput");
             var recordValue = recordInput.value;
-
+    
             var newRecord = document.createElement("div");
             newRecord.textContent = recordValue;
             newRecord.classList.add("recordItem");
-
+    
             var recordList = document.getElementById("recordList");
             recordList.appendChild(newRecord);
-
+    
             recordInput.value = '';
+            
         }
-
+    
         const deleteButton = document.getElementById('deleteButton');
         deleteButton.addEventListener('click', function() 
         {
             var recordList = document.getElementById("recordList");
             var records = recordList.getElementsByClassName("recordItem");
             var lastRecordIndex = records.length - 1;
-
+    
             if (lastRecordIndex >= 0)
             {
                 recordList.removeChild(records[lastRecordIndex]);
             }
         });
+        
     </script>
-
+    
 </body>
 </html>
